@@ -30,16 +30,11 @@ function listContacts() {
 }
 
 function getContactById(contactId) {
-  return getData()
+  getData()
     .then((answer) => {
-      answer.map((contact) => {
-        // console.log(contact.id)
-        if (contact.id !== contactId) {
-          return
-        }
-        if (contact.id === contactId) {
+      answer.find((contact) => {
+        if (contact.id === Number(contactId)) {
           console.log(contact)
-          return contact
         }
       })
     })
@@ -53,7 +48,7 @@ function removeContact(contactId) {
   return getData()
     .then((answer) => {
       const filteredContacts = answer.filter((contact) => {
-        return contact.id !== contactId
+        return contact.id !== Number(contactId)
       })
       console.log("removed")
       updateContacts(filteredContacts)

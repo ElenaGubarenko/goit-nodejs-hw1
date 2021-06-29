@@ -1,4 +1,4 @@
-const { getData, updateContacts, contactsPath, listContacts, getContactById, removeContact, addContact } = require("./contacts")
+const { listContacts, getContactById, removeContact, addContact } = require("./contacts")
 
 const { Command } = require("commander")
 const program = new Command()
@@ -37,19 +37,3 @@ function invokeAction({ action, id, name, email, phone }) {
 }
 
 invokeAction(argv)
-
-// getData()
-// listContacts()
-// getContactById(5)
-// removeContact(5)
-// addContact("Cyrus Jackson", "nibh@semsempererat.com", "(501) 472-5218")
-
-// {
-//   id: 5,
-//   name: 'Cyrus Jackson',
-//   email: 'nibh@semsempererat.com',
-//   phone: '(501) 472-5218'
-// }
-
-// listContacts(contactsPath)
-// console.log(contactsPath)
