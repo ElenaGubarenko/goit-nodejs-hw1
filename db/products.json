@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "category": "DVD",
+      "skuValue": "852",
+      "nameValue": "85",
+      "priceValue": "41",
+      "dvdSizeValue": "5",
+      "id": 5
+    },
+    {
+      "category": "DVD",
+      "skuValue": "1",
+      "nameValue": "1",
+      "priceValue": "1",
+      "dvdSizeValue": "1",
+      "id": 6
+    }
+  ]
+}

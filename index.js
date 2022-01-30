@@ -1,4 +1,4 @@
-const { listContacts, getContactById, removeContact, addContact } = require("./contacts")
+const { listProducts, removeProduct, addProduct } = require("./products")
 
 const { Command } = require("commander")
 const program = new Command()
@@ -13,22 +13,18 @@ program.parse(process.argv)
 
 const argv = program.opts()
 
-function invokeAction({ action, id, name, email, phone }) {
+function invokeAction({ action, id,product}) {
   switch (action) {
     case "list":
-      listContacts()
+      listProducts()
       break
-
-    case "get":
-      getContactById(id)
-      break
-
+    
     case "add":
-      addContact(name, email, phone)
+      addProduct(product)
       break
 
     case "remove":
-      removeContact(id)
+      removeProduct(id)
       break
 
     default:
